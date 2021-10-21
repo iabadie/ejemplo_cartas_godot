@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://escenas/Mundo.gd" type="Script" id=1]
+
+[node name="Mundo" type="Node2D" groups=[
+"seleccion",
+]]
+script = ExtResource( 1 )
+
+[node name="BotonSi" type="Button" parent="."]
+margin_left = 776.15
+margin_top = 283.897
+margin_right = 856.15
+margin_bottom = 323.897
+rect_min_size = Vector2( 80, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "SI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonNo" type="Button" parent="."]
+margin_left = 158.489
+margin_top = 276.491
+margin_right = 238.489
+margin_bottom = 316.491
+rect_min_size = Vector2( 80, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "NO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cartas" type="Position2D" parent="."]
+position = Vector2( 424.118, 156.514 )
+
+[node name="Textos" type="Control" parent="."]
+margin_left = 393.506
+margin_top = 28.1429
+margin_right = 433.506
+margin_bottom = 68.1429
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NombrePolitica" type="Label" parent="Textos"]
+margin_right = 55.0
+margin_bottom = 14.0
+text = "Política: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NombreSalud" type="Label" parent="Textos"]
+margin_top = 21.2306
+margin_right = 62.0
+margin_bottom = 35.2306
+text = "Salud:      "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValorPolitica" type="Label" parent="Textos"]
+margin_left = 61.2231
+margin_right = 101.223
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValorSalud" type="Label" parent="Textos"]
+margin_left = 62.2105
+margin_top = 21.2306
+margin_right = 102.211
+margin_bottom = 35.2306
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="BotonSi" to="." method="_on_BotonSi_button_down"]
+[connection signal="button_down" from="BotonNo" to="." method="_on_BotonNo_button_down"]
